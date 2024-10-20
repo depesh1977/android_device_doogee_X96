@@ -1,8 +1,8 @@
 # Dynamic partitions
-/system                 ext4    /dev/block/mapper/system_a            		flags=backup=1;wipeingui;display="System"
-/system_ext             ext4	/dev/block/mapper/system_ext_a			    flags=backup=1;display="System_Ext"
-/vendor             	ext4    /dev/block/mapper/vendor_a                  flags=backup=1;display="Vendor"
-/product            	ext4    /dev/block/mapper/product_a           		flags=backup=1;display="Product"
+/system                 ext4    /dev/block/mapper/system            		flags=backup=1;wipeingui;display="System"
+/system_ext             ext4	/dev/block/mapper/system_ext			    flags=backup=1;display="System_Ext"
+/vendor             	ext4    /dev/block/mapper/vendor                  flags=backup=1;display="Vendor"
+/product            	ext4    /dev/block/mapper/product           		flags=backup=1;display="Product"
 
 # Images
 /system_image	    	emmc  	 /dev/block/mapper/system_a			        flags=backup=1;flashimg=1;display="System Image"
@@ -41,7 +41,7 @@
 /logo                   emmc     /dev/block/by-name/logo                    flags=backup=1
 /fbootlogo              emmc     /dev/block/by-name/fbootlogo               flags=backup=1
 /metadata              	ext4     /dev/block/by-name/metadata              	flags=backup=1
-/data                   f2fs     /dev/block/by-name/userdata                flags=encryptable=footer
+/data                   f2fs     /dev/block/by-name/userdata                flags=display=Userdata;backup=1;encryptable=footer
 /socko                 	ext4     /dev/block/by-name/socko                 	flags=backup=1
 /socko_image            emmc     /dev/block/by-name/socko_a                 flags=backup=1;flashimg=1;display="Socko Image"
 /odmko                 	ext4     /dev/block/by-name/odmko                 	flags=backup=1
