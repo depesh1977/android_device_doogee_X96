@@ -1,0 +1,28 @@
+From 9ce363376261352132f2e2e44d027e173dde5062 Mon Sep 17 00:00:00 2001
+From: brigudav <alexvl1972@hotmail.com>
+Date: Tue, 22 Oct 2024 11:37:05 +1000
+Subject: [PATCH] patch del twrpfastboot=1
+
+---
+ vendor/twrp/config/BoardConfigTWRP.mk | 7 -------
+ 1 file changed, 7 deletions(-)
+
+diff --git a/vendor/twrp/config/BoardConfigTWRP.mk b/vendor/twrp/config/BoardConfigTWRP.mk
+index a163cd7..766f1a8 100644
+--- a/vendor/twrp/config/BoardConfigTWRP.mk
++++ b/vendor/twrp/config/BoardConfigTWRP.mk
+@@ -1,11 +1,4 @@
+ include vendor/twrp/config/BoardConfigKernel.mk
+ include vendor/twrp/config/BoardConfigSoong.mk
+ 
+-ifeq ($(BOARD_USES_RECOVERY_AS_BOOT),true)
+-    ifeq ($(BOARD_BOOT_HEADER_VERSION),3)
+-         GENERIC_KERNEL_CMDLINE += twrpfastboot=1
+-    else
+-        INTERNAL_KERNEL_CMDLINE += twrpfastboot=1
+-    endif
+-endif
+ 
+-- 
+2.17.1
+
