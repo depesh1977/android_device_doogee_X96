@@ -41,19 +41,6 @@ TARGET_SCREEN_DENSITY := 320
 # SPRD hardware
 BOARD_USES_SPRD_HARDWARE := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    system \
-    vendor \
-    system_ext \
-    product \
-    boot \
-    dtb \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor
-
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
